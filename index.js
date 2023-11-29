@@ -17,16 +17,30 @@
 // console.log('Hello ')
 // console.log('     World')
 
-const readline = require('readline');
-const rl = readline.createInterface({
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//     input : process.stdin,
+//     output : process.stdout
+// })
+// rl.question('please enter your name : ', (name) => {
+//     console.log('you are ' + name);
+//     rl.close()
+// })
+// rl.on ('close', () => {
+//     console.log('Interface is closed');
+//     process.exit(0);
+// })
+
+const readline2 = require('readline');
+const rl2 = readline2.createInterface({
     input : process.stdin,
     output : process.stdout
 })
-rl.question('please enter your name : ', (name) => {
-    console.log('you are ' + name);
-    rl.close()
+rl2.question('How old are you ? ', (age) => {
+    console.log('your age is ' + age)
+    rl2.close();
 })
-rl.on ('close', () => {
-    console.log('Interface is closed');
+rl2.on('close', () => {
+    console.log('exit')
     process.exit(0);
 })
