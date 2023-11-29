@@ -50,10 +50,19 @@
 
 
 // Lesson 5
+/****************************** */
+// const fs = require('fs');
+// const textIn = fs.readFileSync('./files/input.txt', 'utf-8');
+// console.log(textIn)
 
-const fs = require('fs');
-const textIn = fs.readFileSync('./files/input.txt', 'utf-8');
-console.log(textIn)
+// const content = `data read from input.txt : ${textIn} \ndate created ${new Date()}`
+// fs.writeFileSync('./files/output.txt', content);
 
-const content = `data read from input.txt : ${textIn} \ndate created ${new Date()}`
-fs.writeFileSync('./files/output.txt', content);
+// readfile from Lesson 7
+/******************************* */
+const { error } = require('console')
+const fs = require('fs')
+fs.readFile('./files/start.txt', 'utf-8', (error, data) => {
+    console.log(data)
+    
+})
