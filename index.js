@@ -60,9 +60,14 @@
 
 // readfile from Lesson 7
 /******************************* */
-const { error } = require('console')
+
 const fs = require('fs')
 fs.readFile('./files/start.txt', 'utf-8', (error, data) => {
     console.log(data)
-    
+    fs.readFile(`./files/${data}.txt`, `utf-8`, (error2, data2) => {
+        console.log(data2)
+        fs.writeFile('./files/output.txt', `${data2}\n\n${new Date()}`,(error3, data3) => {
+            console.log('file written succesfully');
+        })
+    })
 })
